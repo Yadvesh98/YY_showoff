@@ -82,3 +82,9 @@ module "key_vault" {
   location   = "East US"
   tenant_id  = "data.azurerm_client_config.current.tenant_id"
 }
+
+module "rg" {
+  source      = "../../modules/azurerm_resource_group"
+  rg_name     = "preprod-rg1"
+  rg_location = "East US"
+}
